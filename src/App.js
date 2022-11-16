@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 
+import Input from './components/input';
+import Todo from './components/todo';
+
 function App() {
   const baseUrl = "http://localhost:8080/"
 
@@ -99,25 +102,13 @@ function App() {
   return (
     <div className="App">
       <h1>To-Do List</h1>
-      <form onSubmit={InsertTodo}>  
-        <label>
-          <input type="text" required={true} value={input} onChange={ChangeText}/>
-        </label>
-        <input type='submit' value='Create'/> 
-      </form>
+      <Input handleSubmit={InsertTodo} input={input} handleChange={ChangeText}/>
 
       {
         todos ? todos.map((todo) => {
           return (
-            <div className='todo' key={todo.id}>
-              <p>
-                <label className={todo.completed ? "completed" : null} onClick={()=> UpdateTodo(todo.id)}>
-                  {/* db에 있는 todo list 값 */}
-                  {todo.todoName}
-                </label>  
-                <label onClick={()=> DeleteTodo(todo.id)}>x</label>
-              </p>
-            </div>
+            <Todo key={todo.id}
+              todo={todo} handleClick={()=> UpdateTodo(todo.id)} handleDelete={()=> DeleteTodo(todo.id)}/>
           )
         
         }) : null
