@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+
+.completed{
+  /* 취소선 */
+  text-decoration: line-through;  
+}
