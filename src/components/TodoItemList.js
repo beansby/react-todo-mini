@@ -8,7 +8,6 @@ class TodoItemList extends Component {
 
         return(
             <div>
-                Todo Item 자리
                 <div>
                     <TodoItem content="TodoItem1"/>
                     <TodoItem content="TodoItem2"/>

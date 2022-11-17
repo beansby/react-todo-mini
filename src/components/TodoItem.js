@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './TodoItem.css'
 
 // check값 활성화시 체크표시, 마우스가 hover될때 엑스마크 보여줌
 class TodoItem extends Component{
