@@ -1,6 +1,5 @@
 import {Component} from 'react';
 
-
 function Todo(props){
     return(
         <div className='todo' key={props.todo.id}>
