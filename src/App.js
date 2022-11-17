@@ -1,13 +1,16 @@
 import { Component } from "react";
 import TodoListTemplate from "./components/TodoListTemplate";
+import TodoForm from "./components/TodoForm";
+import TodoItemList from "./components/TodoItemList";
 
 class App extends Component{
     render(){
         return (
             <>
-                <TodoListTemplate>
-                    오늘 할일 템플릿
+                <TodoListTemplate form={<TodoForm/>}>
+                    <TodoItemList/>
                 </TodoListTemplate>
+
             </>
         )
     }
