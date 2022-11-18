@@ -4,10 +4,15 @@
   
 .form input {
     flex: 1; /* 버튼을 뺀 빈 공간을 모두 채워줍니다 */
-    font-size: 1.25rem;
+    font-size: 1rem;
     outline: none;
     border: none;
-    border-bottom: 1px solid #353b54e0;
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 10px;
+    font-family: 'Jura', sans-serif;
+    background-color: rgba(255, 255, 255, 0.575);
+    border-radius: 30px;
 }
   
 .create-button {
@@ -16,13 +21,17 @@
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left: 1rem;
-    background: #353b54e0;
-    border-radius: 3px;
+    background: rgba(19, 155, 233, 0.603);
+    border-radius: 50px;
     color: white;
     font-weight: 600;
+    font-family: 'Jura', sans-serif;
     cursor: pointer;
+    
 }
   
 .create-button:hover {
-    background: #353b54e0;
+    background: #ffffffe0;
+    color: rgb(19, 154, 233);
+    font-family: 'Jura', sans-serif;
 }

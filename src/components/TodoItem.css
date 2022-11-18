@@ -1,17 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&family=Lato&family=Nanum+Gothic:wght@400;700;800&family=Rajdhani&display=swap');
+
 .todo-item {
     padding: 1rem;
     display: flex;
     align-items: center; /* 세로 가운데 정렬 */
+    align-content: center;
+    
     cursor: pointer;
     transition: all 0.15s;
     user-select: none;
-    background-color: whitesmoke;
+    /* background-color: rgba(245, 245, 245, 0.199); */
+    color: white;
+    
     margin: 0.3rem;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 30px;
+
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
 }
   
 .todo-item:hover {
-    background: #353b544d;
+    background: #ececec70;
 }
   
 /* todo-item 에 마우스가 있을때만 .remove 보이기 */
@@ -20,13 +29,13 @@
 }
   
 /* todo-item 사이에 윗 테두리 */
-.todo-item + .todo-item {
+/* .todo-item + .todo-item {
     border-top: 1px solid #f1f3f5;
-}
+} */
   
 .todo-item-remove {
     margin-right: 1rem;
-    color: #e64980;
+    color: rgb(235, 147, 173);
     font-weight: 600;
     opacity: 0;
 }
@@ -38,13 +47,13 @@
   
 .isComplete {
     text-decoration: line-through;
-    color: #adb5bd;
+    color: #6b6b72;
 }
   
 .isComplete-mark {
     font-size: 1.5rem;
     line-height: 1rem;
     margin-left: 1rem;
-    color: #353b54e0;;
+    color: rgb(235, 147, 173);
     font-weight: 800;
 }
