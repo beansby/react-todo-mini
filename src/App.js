@@ -30,7 +30,7 @@ class App extends Component{
     }
 
     handleInitInfo(){
-        fetch("/api/todos").then(res> res.json())
+        fetch("/api/todos").then(res => res.json())
                            .then(todos=> this.setState({todos:todos}))
                            .catch(err=> console.log(err))
     }
@@ -53,7 +53,7 @@ class App extends Component{
         this.setState({
             // input:"",
             todos:todos.concat({
-                id:0,
+                id: 0,
                 content:inputValue,
                 isComplete:false
             })
@@ -68,7 +68,7 @@ class App extends Component{
             if(!res.ok){
                 throw new Error(res.status);
             } else {
-                return this.handleInitInfo;
+                return this.handleInitInfo();
             }
         })
         .catch(err=>console.log(err));
